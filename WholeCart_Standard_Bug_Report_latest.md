@@ -1,6 +1,6 @@
 # Standard Bug Report Document – WholeCart Marketplace
 
-The following 23 unique bug reports are structured for QA assessment, with **Description, Steps to Reproduce, Expected Result, Actual Result, and Priority**.
+The following 25 unique bug reports are structured for QA assessment, with **Description, Steps to Reproduce, Expected Result, Actual Result, and Priority**.
 
 **Priority definitions:** P1 – High business impact; P2 – Major functional issue; P3 – Moderate issue.
 
@@ -339,6 +339,43 @@ The following 23 unique bug reports are structured for QA assessment, with **Des
 * **Severity:** Medium.
 * **Priority:** P2 – Major (confirm based on delivery impact).
 
+## Bug 24: Delivery Fee Details Missing from Tax Invoice (BR-08 Violation)
+
+* **Description:** The generated Tax Invoice does not include the delivery fee details, violating business requirement BR-08.
+* **Steps to reproduce:**
+
+1. Log in as a buyer.
+2. Place an order that includes a delivery fee.
+3. Navigate to the Order or Invoice section.
+4. Open or download the generated Tax Invoice.
+5. Review the invoice details for the delivery fee.
+* **Expected result:** The Tax Invoice should display the delivery fee details as required by BR-08, along with the other applicable invoice charges.
+* **Actual result:** The delivery fee details are missing from the generated Tax Invoice.
+* **Severity:** High
+* **Priority:** – High
+
+## Bug 25: Case Size and Case Price Are Combined into a Single Column on Seller Products Page
+
+* **Description:** On the seller's Products page, the case_size and case_price fields are displayed together under a single column named Case instead of being displayed as separate columns. For example, case_size = 4 and case_price = 1000 are shown as 4*1000 in the Case column.
+
+* **Steps to reproduce:**
+
+1.Log in to WholeCart as a seller.
+2.Navigate to the Products page.
+3.Locate a product with a case size of 4 and a case price of 1000.
+4.Review the product table columns and displayed values.
+5.Verify whether Case Size and Case Price are displayed separately.
+
+* **Expected result:** The Products page should display case_size and case_price in separate columns:
+Case Size: 4
+Case Price: ₹1,000
+
+* **Actual result:** The Products page combines both values into a single column named Case, displaying them as 4*1000. Separate Case Size and Case Price columns are not available.
+
+* **Severity:** Medium
+
+* **Priority:** P2 – Major
+
 ## Summary of reported defects
 
 |Priority|Count|Main concerns|
@@ -346,7 +383,7 @@ The following 23 unique bug reports are structured for QA assessment, with **Des
 |P1 – High|14|Checkout, duplicate orders, refunds, invoices, stock, order status and financial correctness|
 |P2 – Major|8|Filters, messaging, redelivery, cart removal, delivery-slot date, CSV normalization and validation|
 |P3 – Moderate|1|Pagination|
-|**Total**|**23**|**Unique bug reports**|
+|**Total**|**25**|**Unique bug reports**|
 
 
 
